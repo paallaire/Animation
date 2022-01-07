@@ -1,0 +1,84 @@
+@tailwind base;
+
+@import "./abstracts/functions";
+@import "./abstracts/variables";
+@import "./abstracts/debug";
+
+/* base
+// -------------------------------------------- */
+@import "./base/fonts";
+@import "./base/tags";
+@import "../icomoon/style.css";
+
+@tailwind components;
+
+/* objects
+// -------------------------------------------- */
+@import "./objects/custom-cursor";
+
+/* components
+// -------------------------------------------- */
+
+/* playground
+// -------------------------------------------- */
+
+/* vendors
+// -------------------------------------------- */
+@import "./vendors/alpine";
+
+/* utilities
+// -------------------------------------------- */
+@tailwind utilities;
+
+#image {
+  width: 300px;
+  height: 300px;
+  @apply rounded-full fixed -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10 opacity-0 scale-50;
+  @apply transition duration-200 ease-in;
+
+  &.is-active {
+    @apply scale-100 opacity-100;
+  }
+}
+
+[data-reveal-image] {
+  @apply z-20 relative;
+  @apply transition duration-200 ease-in;
+
+  &.is-active {
+    @apply text-black;
+  }
+}
+
+#grid {
+  li {
+    &:nth-child(2n) {
+      @apply mt-10 transition duration-100 ease-linear;
+    }
+  }
+}
+
+h1 {
+  span {
+    @apply z-20 relative;
+
+    &:hover {
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #f9f8f4;
+    }
+  }
+}
+
+#grid2 {
+  .img-detail {
+    width: 200px;
+    height: 200px;
+    @apply rounded-full fixed -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10 opacity-0 scale-50;
+    @apply transition duration-200 ease-in;
+
+    &.is-active {
+      @apply scale-100 opacity-100;
+    }
+  }
+}

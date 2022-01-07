@@ -1,0 +1,15 @@
+/* html
+-------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+
+  &.no-scroll {
+    @apply overflow-hidden;
+  }
+}
+
+/* body
+-------------------------------------------- */
+body {
+  @apply bg-white font-inter overflow-x-hidden;
+}
