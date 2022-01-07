@@ -45,7 +45,6 @@ export default function cursorCustomInit() {
       });
     }
 
-    if (reveals) { }
     reveals.addEventListener('mouseover', () => {
       elCustomCursor.classList.add('is-hover');
       reveals.classList.add('is-active');
